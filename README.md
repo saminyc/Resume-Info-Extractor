@@ -17,7 +17,7 @@ Clone the repository:
 cd resume-data-extractor
 
 ⚡ Usage<br/>
-1. Place your resume PDF in the project folder.<br/>
+1. Place your resume PDF in the project folder, inside the data folder.<br/>
 2. Run the extractor script:<br/>
 python main.py<br/>
 3. The output will be saved as .json and/or .txt in the outputs/ directory.
