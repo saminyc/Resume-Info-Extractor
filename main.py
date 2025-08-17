@@ -73,12 +73,12 @@ def save_to_json(data, filename="resume_output.json"):
 
 # Example usage
 gemini_json_output = gemini_raw_text_extractor(extracted_raw_text)
-save_to_json(gemini_json_output, "resume_extracted.json")
+
 
 
 # Main function
 def main():
-    print(gemini_json_output)
+    print(save_to_json(gemini_json_output, "resume_extracted.json"))
 
 # Calling main function
 if __name__ == "__main__":
