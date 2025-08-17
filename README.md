@@ -9,7 +9,7 @@ This project extracts structured information from resumes and organizes it into 
 - Past Roles
 - Desired Role
 
-It enables turning unstructured resume data into structured formats that can be stored, analyzed, or integrated into applications like hiring platforms, ATS (Applicant Tracking Systems).
+It enables turning unstructured resume data into structured JSON formats that can be stored, analyzed, or integrated into applications like hiring platforms, ATS (Applicant Tracking Systems).
 <br/>
 
 Clone the repository:
