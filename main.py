@@ -3,6 +3,7 @@ import fitz # using pymupdf
 import google.generativeai as genai
 from dotenv import load_dotenv
 import os
+import json
 
 load_dotenv()
 
@@ -48,6 +49,32 @@ def gemini_raw_text_extractor(raw_text):
 
 
 gemini_json_output=gemini_raw_text_extractor(extracted_raw_text)
+
+# save to json
+import json
+
+
+def save_to_json(data, filename="resume_output.json"):
+    """Save Python dict or raw JSON string to a JSON file"""
+    # If Gemini gave a JSON string, try parsing it first
+    if isinstance(data, str):
+        try:
+            data = json.loads(data)  # convert string → dict
+        except json.JSONDecodeError:
+            print("⚠️ Gemini output was not valid JSON, saving raw text instead.")
+            with open(filename, "w") as f:
+                f.write(data)
+            return
+
+    # Save dict as pretty JSON
+    with open(filename, "w") as f:
+        json.dump(data, f, indent=4)
+
+
+# Example usage
+gemini_json_output = gemini_raw_text_extractor(extracted_raw_text)
+save_to_json(gemini_json_output, "resume_extracted.json")
+
 
 # Main function
 def main():
