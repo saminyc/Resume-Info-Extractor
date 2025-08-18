@@ -13,7 +13,7 @@ It enables turning unstructured resume data into structured JSON formats that ca
 <br/>
 
 Clone the repository:
-</br>git clone https://github.com/your-username/resume-extractor.git<br/>
+</br>git clone https://github.com/saminyc/Resume-Info-Extractor.git<br/>
 cd resume-data-extractor
 
 ⚡ Usage<br/>
